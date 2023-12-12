@@ -29,7 +29,6 @@ C('')('')..\__/.С_Новым_Годом!!! Уважаемый и дорогой
     grid-column: 1/2;
 }
 
-
 .header__links-list {
     gap: 32px;
     display: grid;
@@ -281,7 +280,6 @@ C('')('')..\__/.С_Новым_Годом!!! Уважаемый и дорогой
     padding: 0 50px; 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
 }
 
 .footer__address {
