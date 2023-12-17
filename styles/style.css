@@ -14,23 +14,20 @@ C('')('')..\__/.С_Новым_Годом!!! Уважаемый и дорогой
 .header {
     font-size: 18px;
     font-weight: 400;
-    padding: 0 50px; 
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: 70px 100px 138px;
-    align-items: center;   
-    column-gap: 208px;
-    row-gap: 25px;
-    justify-items: end;
+    padding: 92px 50px 96px; 
+    display: flex; 
+    align-items: center; 
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    margin-bottom: 58px;
 }
 
 .header-menu {
-    grid-row: 2/3;  
-    grid-column: 1/2;
+    width: 30%;
 }
 
 .header__links-list {
-    gap: 32px;
+    gap: 20px;
     display: grid;
     grid-template-columns: repeat(3, auto);
 }
@@ -48,36 +45,29 @@ C('')('')..\__/.С_Новым_Годом!!! Уважаемый и дорогой
     border-bottom: #000;
 }
 
-.header__link_active {
-    text-decoration: none; 
-}
-
-.header__logo {
-    grid-row: 2/3;
-    grid-column: 2/3;
-}
-
 .header__logo-image {
     width: 148px;
     height: 105px;
 }
 
 .header__address {
+    place-content: flex-end;
+    width: 30%;
+}
+
+.address {
     display: grid;
     line-height: 135%;
     font-style: normal;
     text-underline-position: under;  
-    grid-column: 3/4;
-    grid-row: 2/3; 
 }
 
 .cover {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/cover.jpg);
+    background: url(../images/cover.jpg);
     background-size: cover;
     background-position-y: center;
-    padding: 161px 22px 50px 48px;
-    height: 757px;
-    margin-bottom: 157px;
+    min-height: 757px;
+    margin-bottom: 157px;  
 }
 
 .cover__title {
@@ -87,7 +77,8 @@ C('')('')..\__/.С_Новым_Годом!!! Уважаемый и дорогой
     text-transform: uppercase;
     color: #fff;
     position: relative;
-    margin-bottom: 135px;
+    margin-bottom: 130px;
+    
 }
 
 .aligned-text {
@@ -108,13 +99,16 @@ C('')('')..\__/.С_Новым_Годом!!! Уважаемый и дорогой
     letter-spacing: 60px;
 }
 
+.no-letter-spacing {
+    letter-spacing: 0;
+}
+
 .cover__description {
     color: #fff;
     display: flex;
-    gap: 78px;
+    gap: 83px;
     justify-content: flex-end;
     align-items: baseline;
-    margin-right: 30px;
 }
 
 .cover__description-text {
@@ -130,10 +124,11 @@ C('')('')..\__/.С_Новым_Годом!!! Уважаемый и дорогой
     font-weight: 400;
     text-transform: uppercase;
     background: none;
-    border: 1px solid #fff;
+    border: 1px solid currentColor;
     border-radius: 0;
     color: #fff;
     padding: 12px 32px;   
+    font-family: Raleway;
 }
 
 .lots {
@@ -149,9 +144,9 @@ C('')('')..\__/.С_Новым_Годом!!! Уважаемый и дорогой
 }   
 
 .lots__card-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 21px;
     list-style: none;
     margin-bottom: 32px;
 }
@@ -159,6 +154,7 @@ C('')('')..\__/.С_Новым_Годом!!! Уважаемый и дорогой
 .lots__card-list-item {
     display: grid;
     justify-content: end;
+    flex-grow: 1;
 }
 
 .card-link {
@@ -168,8 +164,18 @@ C('')('')..\__/.С_Новым_Годом!!! Уважаемый и дорогой
 .card {
     color: #fff;
     width: 430px;
-    height: 450px;
+    min-height: 450px;
+    background-position: center;
 }
+
+.card .overlay {
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 430px;
+    min-height: 450px;
+}    
 
 .card__title {
     color: #fff;
@@ -188,33 +194,18 @@ C('')('')..\__/.С_Новым_Годом!!! Уважаемый и дорогой
 }
 
 .card_type_film {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/card-lot-01.jpg);
-    background-size: cover;
-    display: flex;
-    gap: 200px;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 50px 40px;
+    background-image: url(../images/card-lot-01.jpg);
+    background-size: cover;  
 }
 
 .card_type_book {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/card-lot-02.jpg);
+    background: url(../images/card-lot-02.jpg);
     background-size: cover;
-    display: flex;
-    gap: 30px;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 50px 40px;
 }
 
 .card_type_picture {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/card-lot-03.jpg);
+    background: url(../images/card-lot-03.jpg);
     background-size: cover;
-    display: flex;
-    gap: 80px;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 50px 40px;
 }
 
 .lots__look-more-link {
@@ -225,53 +216,41 @@ C('')('')..\__/.С_Новым_Годом!!! Уважаемый и дорогой
 
 .about {
     display: grid;
-    grid-template-columns: repeat(3, 430px);
-    grid-template-rows: repeat(3, auto);
-    column-gap: 25px;
-    margin: 0 50px 159px 50px;
-    row-gap: 5px;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
+    padding: 0 50px 157px 50px;
+    justify-items: center;
 }
+
+.about__column:last-child {
+    margin-top: 103px;
+  }
 
 .about__logo {
     width: 240px;
     height: 240px;
     background-color: #000;
     border-radius: 50%;
-    display: grid;
-    place-items: center;
-    grid-column: 1/2;
-    grid-row: 1/2;
-    justify-self: center;
+    padding: 63px 46px;
 }
 
 .about__logo-image {
-    width: 148px;
-    height: 105px;
-    z-index: 1;   
+    width: 148px; 
 }
 
 .about__title {
-    grid-column: 2/3;
-    grid-row: 1/2;
     font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
-    align-self: center;
 }
 
-.about__text__part-1 {
-    grid-column: 2/4;
-    grid-row: 2/3;
+.about__text {
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 19px;
-}
-
-.about__text__part-2 {
-    grid-column: 2/4;
-    grid-row: 3/4;
-    font-size: 20px;
-    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 100px;
 }
 
 .footer {
@@ -282,11 +261,7 @@ C('')('')..\__/.С_Новым_Годом!!! Уважаемый и дорогой
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.footer__address {
-    display: grid;
-    line-height: 135%;
-    font-style: normal;
-    text-underline-position: under;  
+.footer__address { 
     grid-column: 1/2;
 }
 
@@ -305,10 +280,6 @@ C('')('')..\__/.С_Новым_Годом!!! Уважаемый и дорогой
     list-style: none;
 }
 
-.footer__link_active {
-    text-decoration: none;
-}
-
 .footer__social-list {
     list-style: none;
     grid-column: 3/4;
@@ -317,11 +288,19 @@ C('')('')..\__/.С_Новым_Годом!!! Уважаемый и дорогой
     gap: 48px;
 }
 
-.footer__social-link {
+.footer__link {
     text-decoration: none;
 }
 
 .footer__social-icon {
     width: 48px;
     height: 48px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 165px 50px 50px;
 }
