@@ -259,6 +259,7 @@ C('')('')..\__/.С_Новым_Годом!!! Уважаемый и дорогой
     padding: 0 50px; 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 90px;
 }
 
 .footer__address { 
